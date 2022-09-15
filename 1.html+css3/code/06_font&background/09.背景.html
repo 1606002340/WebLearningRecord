@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 500px;
+            height: 500px;
+            background-color: #bfa;
+            background-image: url("img/1.jpg");
+
+            /* 
+                background-repeat 设置背景图片的重复方式
+                    可选值：
+                        repeat 默认值 背景会X轴和Y轴重复
+                        repeat-x
+                        repeat-y
+                        no-repeat
+            */
+            background-repeat: repeat;
+
+            /* 
+                设置图片位置
+                    top left right bottom center 几个方位来设置
+                        使用方位词时 必须指定两个值，如果只写一个则第二个默认就是center
+                    通过偏移量来指定图片的位置
+                        水平偏移量 垂直方向变量
+            */
+            background-position: top;
+            background-position: 100px 300px;
+
+            /* 
+                设置背景的范围
+                    background-clip
+                        可选值
+                            border-box 默认值，背景会出现在边框的下边
+                            padding-box 背景不会出现在边框，只出现在内容区和内边距
+                            content-box 背景只会出现在内容区
+                    background-origin
+                        可选值
+                            padding-box 默认值 background-position从内边距开始处开始计算
+                            content-box 背景图片的偏移量从内容区处计算
+                            border-box 背景图片的变量从边框处开始计算
+
+            */
+            background-origin: border-box;
+            background-clip: padding-box;
+
+            /* 
+                background-size 设置图片的大小
+                    第一个表示宽度
+                    第二个表示高度
+                        -如果只写一个，则第二个默认是 auto
+
+                    cover图片的比例不变，将元素铺满
+                    contain 图片的比例不变，将图片显示完整
+            */
+            background-size: 200px auto;
+
+
+            /* 
+                background-attachment
+                    -背景图片是否跟随元素移动
+                    -可选值
+                        scroll 默认值 背景图片会跟随元素移动
+                        fixed 背景图片会固定在页面中，不会随元素移动
+                    
+            */
+            background-attachment: scroll;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+</body>
+</html>

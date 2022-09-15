@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            /* css原生也支持变量的设置 */
+            --color:#ff0;
+            --length:200px;
+        }
+        .box1{
+            /* calc()计算函数 */
+            width: calc(200px*2);
+            height: var(--length);
+            background-color: var(--color);
+        }
+
+        .box2{
+            width: var(--length);
+            height: var(--length);
+            color: var(--color);
+        }
+
+        .box3{
+            width: var(--length);
+            height: var(--length);
+            border: 10px solid var(--color);
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">aaaa</div>
+    <div class="box2">aaaa</div>
+    <div class="box3">aaaa</div>
+</body>
+</html>

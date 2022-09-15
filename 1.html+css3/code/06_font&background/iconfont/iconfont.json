@@ -1,0 +1,30 @@
+{
+  "id": "3587476",
+  "name": "aStudy",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "31123027",
+      "name": "尺子",
+      "font_class": "chizi",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "31123028",
+      "name": "凳子",
+      "font_class": "dengzi",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "31123029",
+      "name": "篮球场",
+      "font_class": "lanqiuchang",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    }
+  ]
+}

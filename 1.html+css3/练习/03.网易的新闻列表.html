@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网易的新闻列表</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        a{
+            text-decoration:none;
+        }
+        /* 设置容器的样式 */
+        .new-warpper{
+            width: 300px;
+            height: 357px;
+            /* 设置居中 */
+            margin: 50px auto;
+            /* background-color: #bfa; */
+            /* 设置上边框 */
+            border-top:1px solid #ddd;
+
+
+        }
+        /* 设置新闻标题 */
+        .news-title{
+            display: inline-block;
+            height: 30px;
+            border-top: 3px solid red;
+            margin-top: -2px;
+            padding-top: 10px;
+        }
+        .news-title a{
+            color: black;
+            text-decoration: none;
+            /* 设置文字的加粗效果 */
+            font-weight: bold;
+        }
+        .news-img{
+            height: 150px;
+        }
+        /* 设置图片中的文字 */
+        .news-img .img-title{
+            margin-top: -30px;
+            color: #ddd;
+            font-weight: bold;
+            padding-left: 10px;
+        }
+        .news-list{
+            margin-top: 20px;
+            /* list-style: square; */
+        }
+        .news-list li{
+            margin-bottom: 17px;
+        }
+        .news-list li a{
+            font-size: 14px;
+            color: #666;
+            /* padding-left: 14px; */
+        }
+        /* 通过伪元素为每一个li添加项目符号 */
+        .news-list li a::before{
+            content: "■";
+            color: rgb(158, 158, 158);
+            font-size: 12px;
+            margin-right: 4px;
+        }
+        .news-list li a:hover{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- 创建新闻列表外侧的容器 -->
+    <div class="new-warpper">
+<!-- 创建一个标题biaoq -->
+            <h2 class="news-title">
+                <a href="#">体育</a>
+            </h2>
+            <!-- 创建一个图片的容器 -->
+            <div class="news-img">
+                <a href="">
+                    <img src="./img//03/1.jpg" alt="体育比赛">
+                <!-- 创建图片的标题 -->
+                <h3 class="img-title">比赛输了比赛输了</h3>
+                </a>
+                
+            </div>
+            <ul class="news-list">
+                <li>
+                    <a href="#">爵士烂摊子气走斯奈德 波波钦点他继任</a>
+                </li>
+                <li>
+                    <a href="#">纳达尔：从追风少年到不死战神</a>
+                </li>
+                <li>
+                    <a href="#">单节6记三分并非库里最狠一面 绿军请当心!</a>
+                </li>
+            </ul>
+    </div>
+</body>
+</html>

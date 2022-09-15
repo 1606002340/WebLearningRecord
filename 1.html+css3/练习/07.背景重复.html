@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function con(x){
+            if(x==3)
+                throw new Error("break");
+        }
+        function foo(x=6){
+            return {
+                next:()=>{
+                    con(x);
+                    return {done:!x,value:x&&x--};
+                }
+
+            }
+        }
+        let x=new Object;
+        x[Symbol.iterator]=foo;
+        for (let i of x) {
+            console.log(i);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

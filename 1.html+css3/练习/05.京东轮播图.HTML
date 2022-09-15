@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        /* 设置图片的额容器 */
+        .img-list{
+            margin: 100px auto;
+            width: 590px;
+            height: 470px;
+            /* 为ul开启相对定位，目的使ul定位而不是相对于初始包含块（html）去定位 */
+            position: relative;
+        }
+        /* 设置li */
+        .img-list li{
+            position: absolute;
+        }
+        /* 通过修改元素的层级来显示指定的图片 */
+        .img-list li:nth-child(){
+            z-index: 1 ;
+        }
+        .painter{
+            position: absolute;
+            z-index: 9999;
+            bottom: 20px;
+            left: 40px;
+        }
+        /* 设置导航点的样式 */
+        .painter a{
+            width: 10px;
+            height: 10px;
+            background-color: red;
+            border-radius: 50%;
+            margin-left: 8px;
+            /* display: block; */
+            /* 设置向左浮动 */
+            float: left;
+            background-color: rgba(255, 255, 255, .6);
+            /* 将我们的背景颜色设置到内容区，边框和内边距不在背景颜色 */
+            background-clip: content-box;
+            border: 2px solid transparent;
+        }
+
+        .painter a.active,
+        .painter a:hover{
+            background-color: #fff;
+            border: 2px solid rgba(255, 255, 255, .3);
+            
+        }
+    </style>
+</head>
+<body>
+    <ul class="img-list">
+        <li><a href="javascript:;"><img src="./img/05/001.jpg" alt=""></a></li>
+        <li><a href="javascript:;"><img src="./img/05/002.jpg" alt=""></a></li>
+        <li><a href="javascript:;"><img src="./img/05/003.jpg" alt=""></a></li>
+        <li><a href="javascript:;"><img src="./img/05/004.jpg" alt=""></a></li>
+        <li><a href="javascript:;"><img src="./img/05/005.jpg" alt=""></a></li>
+
+        <div class="painter">   
+            <a class="active" href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+        </div>
+    </ul>
+</body>
+</html>
