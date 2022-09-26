@@ -47,7 +47,7 @@ const router =  new VueRouter({
 					component:Message,
 					meta:{isAuth:true,title:'消息'},
 					children:[
-						{
+						{ 
 							name:'xiangqing',
 							path:'detail',
 							component:Detail,
